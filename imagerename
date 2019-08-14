@@ -1,0 +1,8 @@
+#!/bin/bash
+IMAGES=$(ls *jpg)
+DATE=$(date +%F)
+for PICTURE in ${IMAGES}
+do
+echo "Current image is : ${PICTURE}"
+mv ${PICTURE} ${DATE}-${PICTURE}
+done
