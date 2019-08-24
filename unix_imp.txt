@@ -14,4 +14,4 @@ Creating Groups
 	groupadd groupname
 	usermod -a -G groupname username  (adding user)
 	getting group details /etc/group
-
+ 
