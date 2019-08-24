@@ -1,7 +1,7 @@
 Important commands
 ===================
 
-Creating users and groups
+a) Creating users and groups
 
 https://www.techrepublic.com/article/how-to-create-users-and-groups-in-linux-from-the-command-line/
 
@@ -10,16 +10,18 @@ Adding user in unix
 	useradd -m username (adding)
 	userdel -r username (deleting)
 	passwd username (setting password)
-Creating Groups
-	groupadd groupname
-	usermod -a -G groupname username  (adding user)
-	getting group details /etc/group
+
  
 
-Change a User’s Primary Group
+b)Change a User’s Primary Group
 -----------------------------
 
 While a user account can be part of multiple groups, one of the groups is always the “primary group” and the others are “secondary groups”. The user’s login process and files and folders the user creates will be assigned to the primary group.
 To change the primary group a user is assigned to, run the usermod command, replacingexamplegroup  with the name of the group you want to be the primary and exampleusernamewith the name of the user account.
 
 usermod -g groupname username
+
+Creating Groups
+	groupadd groupname
+	usermod -a -G groupname username  (adding user)
+	getting group details /etc/group
