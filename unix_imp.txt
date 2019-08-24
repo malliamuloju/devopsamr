@@ -1,1 +1,17 @@
 Important commands
+===================
+
+Creating users and groups
+
+https://www.techrepublic.com/article/how-to-create-users-and-groups-in-linux-from-the-command-line/
+
+Adding user in unix
+ 
+	useradd -m username (adding)
+	userdel -r username (deleting)
+	passwd username (setting password)
+Creating Groups
+	groupadd groupname
+	usermod -a -G groupname username  (adding user)
+	getting group details /etc/group
+
