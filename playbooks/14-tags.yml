@@ -1,0 +1,21 @@
+- name: Demo on tags 
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Print One if tag one is given 
+      debug:
+        msg: One
+      tags:
+        - one 
+
+    - name: Print Two if tag two is given 
+      debug:
+        msg: Two 
+      tags:
+        - two 
+
+    - name: Print Three if tag three is given 
+      debug:
+        msg: Three 
+      tags:
+        - three 

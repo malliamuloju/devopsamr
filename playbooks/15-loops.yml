@@ -1,0 +1,17 @@
+- name: Demo on Loop 
+  hosts: all
+  tasks:
+    - name: Print Multiple Mesg 
+      debug:
+        msg: "hello, {{item}}"
+      loop:
+        - Raju
+        - Rahim 
+        - Ravi
+
+    - name: Have two lists as loop 
+      debug:
+        msg: "Hello {{item[0]}}, & Hello {{item[1]}}"
+      loop:
+        - ["One", "Two"]
+        - ["New", "Old"]

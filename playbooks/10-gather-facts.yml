@@ -1,0 +1,13 @@
+- name: Print gather fact variable 
+  hosts: all
+  #gather_facts: no
+  # gather_facts by default is yes, if you are not using any facts then you can disable it like shown in above commented line
+  tasks:
+    - name: Print ansible_machine 
+      debug:
+        msg: "Architecture - {{ansible_machine}}"
+
+    - name: Print custom facts
+      debug:
+        msg: "{{ansible_local}}"
+        

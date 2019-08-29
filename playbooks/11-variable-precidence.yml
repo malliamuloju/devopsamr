@@ -1,0 +1,16 @@
+- name: vars from task is more priority than play 
+  hosts: all
+  vars:
+    URL: vars.google.com
+  tasks:
+    - debug:
+        msg: "{{URL}}"
+      vars: 
+        URL: task.google.com
+
+
+## 1. Variables from CLI are the the utmost priority variables 
+## 2. Task variables pick the next priorty 
+## 3. Play variables , vars, vars_file , vars_prompt 
+## 4. Host variables in inventory 
+## 5. Group variables in inventory 

@@ -1,0 +1,15 @@
+- name: Check Load Average and Send email 
+  hosts: all
+  tasks:
+    - name: Get load average 
+      shell: uptime 
+      register: out
+
+    - name: Fetch the load value 
+      set_fact:
+        LOAD: "{{out.stdout.split()[-3].split('.')[0]}}"
+        #LOAD: "6"
+
+    - name: Send email of load average 
+      shell: curl -s --user 'api:fb37630f251d4e4026404bda2b068349-898ca80e-37c793a4'  https://api.mailgun.net/v3/sandboxac88c5b19eee4a63992f652822d0ae8e.mailgun.org/messages  -F from='LOAD AVERAGE NOTIFY<jenkins@devops.ml>'  -F to='Raghu <raghudevops39@gmail.com>'  -F subject='LOAD AVERAGE - {{ansible_hostname}}'  -F text="Load Average is High on Server\n\n{{out.stdout}}\n\nRegards,\nAnsible Monitoring Team."
+      when: LOAD > "5"

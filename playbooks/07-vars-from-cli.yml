@@ -1,0 +1,8 @@
+- name: Demo on vars from cli 
+  hosts: all 
+  tasks:
+    - name: Print URL 
+      debug:
+        msg: "URL = {{URL}}"
+## From command line we need to parse a variable by using -e option 
+# ansible-playbook -i hosts playbooks/07-vars-from-cli.yml -e URL=cli.google.com

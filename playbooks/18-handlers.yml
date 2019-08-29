@@ -1,0 +1,16 @@
+- name: Demo on handlers 
+  hosts: centos
+  become: yes 
+  tasks:
+    - name: Install a web server
+      package:
+        name: httpd 
+        state: present 
+      notify: Restart service
+       
+  handlers:
+    - name: Restart service 
+      service:
+        name: httpd
+        state: restarted 
+      

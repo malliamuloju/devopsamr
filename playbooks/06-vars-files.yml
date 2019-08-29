@@ -1,0 +1,9 @@
+- name: Print URL from file 
+  hosts: all
+  vars_files:
+    - 01-vars.yml
+  tasks:
+    - name: Print URL 
+      debug:
+        msg: "URL = {{URL}}"
+        

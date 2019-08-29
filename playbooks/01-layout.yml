@@ -1,0 +1,13 @@
+- name: Play1 
+  hosts: all
+  tasks:
+    - name: Ping 
+      ping: 
+
+- name: Play2 
+  hosts: all 
+  tasks:
+    - name: Create an empty file 
+      file:
+        path: /tmp/demo
+        state: touch

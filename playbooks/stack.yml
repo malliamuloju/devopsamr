@@ -1,0 +1,12 @@
+- name: Install Web Server and Application Server 
+  hosts: all
+  become: yes 
+  roles:
+    #- webserver
+    - appserver
+        
+
+## While writing this playbook we want to keep in mind few things.
+## 1. Code should work for both Ubuntu and CentOS 7 OS 
+## 2. Use roles to manage the code 
+## 
