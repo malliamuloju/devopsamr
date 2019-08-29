@@ -1,0 +1,6 @@
+-name: test print
+ host: all
+ task:
+    -name: printing hellow world
+     debug:
+     msg: Hellow world
