@@ -1,7 +1,10 @@
--name: Tesing print
-hosts: PRIMARY
-tasks: 
-  - name: Printing message
-   debug:
-     msg: "Hai this is Ansible "
- 
+- name: Print Hello World Play
+  ### Above name is not mandatory and it is only used to determine what our playbook is performing
+  hosts: all
+  tasks:
+    - name: Print Hello World 
+    ## Above name is not mandatory but it shows to the user that what task it is performing.
+      debug:
+        msg: "Hello World"
+
+    
