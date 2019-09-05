@@ -3,4 +3,4 @@
   tasks: 
     - name: Printing hellow world
       debug:
-      msg: "this is ansible"
+      msg: "this is ansible "
