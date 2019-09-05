@@ -1,0 +1,6 @@
+-name: Tesing print
+hosts: PRIMARY
+task: 
+  -name: Printing message
+   debug:
+     msg: Hai this is Ansible 
