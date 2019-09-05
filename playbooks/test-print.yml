@@ -1,6 +1,6 @@
-- name: print test
-  hosts: all
-  tasks: 
-    - name: Printing hellow world
-      debug:
-      msg: "this is ansible "
+-name: Tesing print
+hosts: PRIMARY
+tasks: 
+  -name: Printing message
+   debug:
+     msg: "tttteeeessssttttj   "
