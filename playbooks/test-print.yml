@@ -1,10 +1,6 @@
-- name: Print Hello World Play
-  ### Above name is not mandatory and it is only used to determine what our playbook is performing
+- name: print test
   hosts: all
-  tasks:
-    - name: Print Hello World 
-    ## Above name is not mandatory but it shows to the user that what task it is performing.
+  tasks: 
+    - name: Printing hellow world
       debug:
-        msg: "Hello World"
-
-    
+      msg: "this is ansible"
