@@ -3,5 +3,5 @@ hosts: PRIMARY
 tasks: 
   - name: Printing message
    debug:
-     msg: "Hai this is Ansible "
+       msg: "Hai this is Ansible "
  
