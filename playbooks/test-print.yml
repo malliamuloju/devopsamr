@@ -3,4 +3,4 @@ hosts: PRIMARY
 tasks: 
   -name: Printing message
    debug:
-     msg: "tttteeeessssttttj  123 "
+     msg: "testing numbers  123 "
